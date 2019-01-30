@@ -1,3 +1,5 @@
+/* General */
+
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +12,22 @@
     width: 150px;
     height: 150px;
 }
+
+
+/* Inner circle */
+
+.innercircle {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: #ddd;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+
+/* Outer ring + animation */
 
 .outer .ring1 {
     position: absolute;
@@ -31,21 +49,38 @@
     animation: pulse 1s ease-out infinite;
 }
 
-.innercircle {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    background-color: #ddd;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
 }
 
-@keyframes pulse {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(1.2);
-    }
+
+/* Outer ring cutouts + animation */
+
+.outer .tri1 {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: -25px;
+    left: -20px;
+    border-top: 80px solid transparent;
+    border-bottom: 80px solid transparent;
+    border-left: 80px solid #fff;
+}
+
+.outer .tri1 {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: -25px;
+    border-top: 80px solid transparent;
+    border-bottom: 80px solid transparent;
+    border-right: 80px solid #fff;
+    animation: spin 1s ease-in infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
