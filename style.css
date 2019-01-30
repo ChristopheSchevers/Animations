@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#first {
+    position: relative;
+    top: 30px;
+    left: 30px;
+    width: 150px;
+    height: 150px;
+}
+
+.outer .ring1 {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background-color: #ff4500;
+    animation: pulse 1s ease-out infinite;
+}
+
+.outer .core1 {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #fff;
+    animation: pulse 1s ease-out infinite;
+}
+
+.innercircle {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: #ddd;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+@keyframes pulse {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
