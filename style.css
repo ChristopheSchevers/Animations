@@ -186,7 +186,7 @@
 }
 
 .ripcircle2 {
-    animation: ripple 3s 1s ease-out infinite;
+    animation: ripple 3s 2.25s ease-out infinite;
 }
 
 
@@ -195,4 +195,56 @@
 @keyframes ripple {
     from { transform: scale(1); opacity: 1; }
     to { transform: scale(130); opacity: 0; }
+}
+
+
+/* Fifth animation */
+/* Position */
+
+#fifth {
+    position: absolute;
+    top: 30px;
+    left: 800px;
+    width: 150px;
+    height: 150px;
+}
+
+
+/* Dots */
+
+.dots .one, .dots .two, .dots .three {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ddd;
+}
+
+.one {
+    top: 80px;
+    animation: jump 1s ease-in-out infinite;
+}
+
+.two {
+    top: 80px;
+    left: 40px;
+    animation: jump 1s ease-in-out infinite;
+    animation-delay: 0.33s;
+}
+
+.three {
+    top: 80px;
+    left: 80px;
+    animation: jump 1s ease-in-out infinite;
+    animation-delay: 0.66s;
+}
+
+
+/* Keyframe */
+
+@keyframes jump {
+    0% { transform: translateY(0); }
+    25% { transform: translateY(-30px); }
+    75% { transform: translateY(0); }
+    100% { transform: translateY(0); }
 }
