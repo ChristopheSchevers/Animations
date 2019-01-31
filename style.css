@@ -5,6 +5,9 @@
     padding: 0;
 }
 
+
+/* First animation */
+
 #first {
     position: relative;
     top: 30px;
@@ -83,4 +86,71 @@
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+
+/* Second animation */
+
+#second {
+    position: absolute;
+    top: 30px;
+    left: 200px;
+    width: 150px;
+    height: 150px;
+}
+
+/* Inner circle */
+
+.innercircle {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background-color: #ddd;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    z-index: 1;
+}
+
+/* Bouncing balls */
+
+.balls .ball1, .balls .ball2 {
+    position: absolute;
+    background-color: #ff4500;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    top: 45px;
+    left: 45px;
+    z-index: 2;
+}
+
+.ball1 {
+    animation: bounce1 2s linear infinite;    
+}
+
+.ball2 {
+    animation: bounce2 2s linear infinite;
+}
+
+/* Keyframes */
+
+@keyframes bounce1 {
+    0% { transform: rotate(0deg) translateY(-45px); }
+    25% { transform: rotate(90deg) translateY(-15px); }
+    50% { transform: rotate(180deg) translateY(-45px); }
+    75% { transform: rotate(270deg) translateY(-15px); }
+    100% { transform: rotate(360deg) translateY(-45px); }
+}
+
+@keyframes bounce2 {
+    0% { transform: rotate(0deg) translateY(45px); }
+    12.5% { transform: rotate(45deg) translateY(75px); }
+    25% { transform: rotate(90deg) translateY(45px); }
+    37.5% { transform: rotate(135deg) translateY(75px); }
+    50% { transform: rotate(180deg) translateY(45px); }
+    62.5% { transform: rotate(225deg) translateY(75px); }
+    75% { transform: rotate(270deg) translateY(45px); }
+    87.5% { transform: rotate(315deg) translateY(75px); }
+    100% { transform: rotate(360deg) translateY(45px); }
 }
